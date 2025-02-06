@@ -1,4 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
+import path from "path";
+import { Tabela } from "./tabela";
 
 const features = [
   {
@@ -31,13 +34,9 @@ export default function Home() {
   }
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center">
-      <main className="w-3/4 flex flex-col gap-8 items-center justify-center">
-        <h1 className="text-5xl">PregsTools</h1>
-        <div className="flex flex-row items-center">
-          <BotoesNavegacao features={features} />
-        </div>
-      </main>
-    </div>
+    <main className="w-full h-screen flex flex-col p-8 items-start justify-start">
+      <h1 className="text-5xl">Lista de compras</h1>
+      <Tabela />
+    </main>
   );
 }

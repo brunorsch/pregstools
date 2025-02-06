@@ -5,6 +5,7 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/flyonui/dist/js/*.js",
   ],
+  
   theme: {
     extend: {
       colors: {
@@ -14,11 +15,8 @@ export default {
     },
   },
 
-  content: [], // Require only if you want to use FlyonUI JS component
-
   plugins: [
     require("flyonui"),
-    require("flyonui/plugin") // Require only if you want to use FlyonUI JS component
-  ]
-  plugins: [],
+    require("flyonui/plugin")
+  ],
 } satisfies Config;
