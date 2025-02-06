@@ -2,9 +2,8 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flyonui/dist/js/*.js",
   ],
   theme: {
     extend: {
@@ -14,5 +13,12 @@ export default {
       },
     },
   },
+
+  content: [], // Require only if you want to use FlyonUI JS component
+
+  plugins: [
+    require("flyonui"),
+    require("flyonui/plugin") // Require only if you want to use FlyonUI JS component
+  ]
   plugins: [],
 } satisfies Config;
